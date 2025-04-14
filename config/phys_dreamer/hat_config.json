@@ -1,0 +1,66 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [0.0],
+    "rotation_axis": [0],
+    "substep_dt": 1e-4,
+    "frame_dt": 4e-2, 
+    "opt_frame_dt": 4e-2,
+    "frame_num": 50,
+    "nu": 0.4,
+    "E": 0.005,
+    "material": "elastic",
+    "density": 125,
+    "g": [0,0,0],
+    "grid_v_damping_scale": 0.9999,
+    "rpic_damping": 0.0,
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "cuboid",
+            "point": [1, 1, 1.5],
+            "size": [0.15, 0.15, 0.15],
+            "velocity": [0, 0, 0],
+            "start_time": 0,
+            "end_time": 1e3,
+            "reset": 1
+        },
+        {
+            "type": "cuboid",
+            "point": [1, 1.2, 1.5],
+            "size": [0.15, 0.15, 0.15],
+            "velocity": [0, 0, 0],
+            "start_time": 0,
+            "end_time": 1e3,
+            "reset": 1
+        },
+        {
+            "type": "particle_impulse",
+            "force": [1.0, -2.0, 1.0],
+            "point": [1.24, 0.99, 1.02],
+            "num_dt": 1,
+            "start_time": 0
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [0,0,1],
+    "mpm_space_viewpoint_center": [0.95,1.07,1],
+    "default_camera_index": 0,
+    "show_hint": false,
+    "move_camera": true,
+    "delta_a": -0.3,
+    "delta_e": 0.0,
+    "delta_r": -0.0005,
+    "line":{
+        "axis": 0,
+        "pos": 540,
+        "start": 500,
+        "end": 1240 
+    },
+    "bbox_2d": [200, 1000, 500, 1200],
+    "reduction": "sum",
+    "lr": {
+        "E": [0.001, 0.0001],
+        "nu": [0.001, 0.0001]
+    }
+}

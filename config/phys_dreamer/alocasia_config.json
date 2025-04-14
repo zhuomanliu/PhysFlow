@@ -1,0 +1,61 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [0.0],
+    "rotation_axis": [0],
+    "substep_dt": 1e-4,
+    "frame_dt": 4e-2, 
+    "opt_frame_dt": 4e-2,
+    "frame_num": 50,
+    "nu": 0.3,
+    "E": 0.01,
+    "yield_stress": 0.05,
+    "plastic_viscosity": 0.01,
+    "material": "foam",
+    "density": 75,
+    "g": [0,0,0],
+    "grid_v_damping_scale": 0.9999,
+    "rpic_damping": 0.0,
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "cuboid",
+            "point": [0.95, 0.77, 0.65],
+            "size": [0.1, 0.1, 0.1],
+            "velocity": [0, 0, 0],
+            "start_time": 0,
+            "end_time": 1e3,
+            "reset": 1
+        },
+        {
+            "type": "particle_impulse",
+            "force": [0.25, 0, 0],
+            "point": [1.3, 0.85, 1.28],
+            "num_dt": 1,
+            "start_time": 0
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [0,0,1],
+    "mpm_space_viewpoint_center": [0.95,1.07,1],
+    "default_camera_index": 0,
+    "show_hint": false,
+    "move_camera": true,
+    "delta_a": -0.4,
+    "delta_e": 0.2,
+    "delta_r": 0.003,
+    "line":{
+        "axis": 0,
+        "pos": 250,
+        "start": 500,
+        "end": 1250 
+    },
+    "bbox_2d": [50, 750, 300, 1650],
+    "reduction": "sum",
+    "lr": {
+        "E": [0.1, 0.001],
+        "nu": [0.1, 0.001],
+        "yield_stress": [1.0, 0.001],
+        "plastic_viscosity": [1.0, 0.001]
+    }
+}

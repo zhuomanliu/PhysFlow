@@ -1,0 +1,95 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [30],
+    "rotation_axis": [0],
+    "substep_dt": 1e-4,
+    "frame_dt": 4e-2,
+    "opt_frame_dt": 4e-2,
+    "frame_num": 50,
+    "nu": 0.33,
+    "E": 1.0,
+    "yield_stress": 0.08,
+    "material": "metal",
+    "density": 2750,
+    "hardening": 1,
+    "xi": 10,
+    "g": [0,0,0],
+    "grid_v_damping_scale": 0.9999,
+    "rpic_damping": 0.0,
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "enforce_particle_velocity_rotation",
+            "point": [
+                1.055, 1.0977, 0.9766
+            ],
+            "normal": [
+                0.53470496, 0.09581769, 0.83958893
+            ],
+            "half_height_and_radius": [
+                0.2,
+                0.1
+            ],
+            "rotation_scale": -10.0,
+            "translation_scale": 0.0,
+            "start_time": 0.0,
+            "end_time": 0.8
+        },
+        {
+            "type": "enforce_particle_velocity_rotation",
+            "point": [
+                1.055, 1.0977, 0.9766
+            ],
+            "normal": [
+                0.53470496, 0.09581769, 0.83958893
+            ],
+            "half_height_and_radius": [
+                0.2,
+                0.1
+            ],
+            "rotation_scale": -5.0,
+            "translation_scale": 0.0,
+            "start_time": 0.8,
+            "end_time": 1.8
+        },
+        {
+            "type": "enforce_particle_velocity_rotation",
+            "point": [
+                1.055, 1.0977, 0.9766
+            ],
+            "normal": [
+                0.53470496, 0.09581769, 0.83958893
+            ],
+            "half_height_and_radius": [
+                0.2,
+                0.1
+            ],
+            "rotation_scale": 0.0,
+            "translation_scale": 0.0,
+            "start_time": 1.8,
+            "end_time": 1e3
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [0,-1,0],
+    "mpm_space_viewpoint_center": [0.95,1.07,1],
+    "default_camera_index": 17,
+    "show_hint": false,
+    "move_camera": true,
+    "delta_a": -0.2,
+    "delta_e": 0.2,
+    "delta_r": -0.001,
+    "line":{
+        "axis": 0,
+        "pos": 450,
+        "start": 70,
+        "end": 450 
+    },
+    "bbox_2d": [180, 550, 70, 450],
+    "lr": {
+        "E": [0.5, 0.001],
+        "nu": [0.5, 0.001],
+        "yield_stress": [0.1, 0.001]
+    }
+}
