@@ -810,6 +810,7 @@ if __name__ == "__main__":
             else:
                 print("-----> saving final video")
                 save_video(os.path.join(args.output_path, 'frames'), os.path.join(args.output_path, 'video_final.mp4'))
+                sys.exit(0)
             mpm_solver.reset_pos_from_torch(mpm_init_pos, mpm_init_vol, mpm_init_cov)
 
             cv2_frames = np.concatenate(cv2_frames, axis=0)
