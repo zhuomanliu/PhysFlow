@@ -61,7 +61,7 @@ def kirchoff_stress_neoHookean(
 ):
     # compute kirchoff stress for FCR model (remember tau = P F^T)
     b = wp.vec3(
-        wp.max(sig[0] * sig[0], 0.01), wp.max(sig[1] * sig[1], 0.01), wp.max(sig[1] * sig[1], 0.01)
+        wp.max(sig[0] * sig[0], 0.01), wp.max(sig[1] * sig[1], 0.01), wp.max(sig[2] * sig[2], 0.01)
     ) 
     b_hat = b - wp.vec3(
         (b[0] + b[1] + b[2]) / 3.0,
